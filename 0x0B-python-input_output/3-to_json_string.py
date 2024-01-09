@@ -2,7 +2,7 @@
 
 """
 This file contains one function
-That return the JSON represantation of an object(string)
+that return the JSON represantation of an object(string)
 """
 import json
 
