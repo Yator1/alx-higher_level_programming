@@ -21,4 +21,4 @@ def write_file(filename="", text=""):
             file_1.write(text)
             characters = len(text)
 
-            return (characters)
+    return (characters)
