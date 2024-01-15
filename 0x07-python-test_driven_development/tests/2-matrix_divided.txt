@@ -1,0 +1,66 @@
+Test for module 2-matrix_divided.py
+
+This module has a function matrix_divided that divides all elements of a matrix
+
+Importing the fnction:
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Tests:
+>>> matrix = [
+...     [1, 3, 6],
+...     [9, 4, 7]
+... ]
+
+Dividing the matrix by a normal integer:
+>>> print(matrix_divided(matrix, 3))
+[[0.33, 1.0, 2.0], [3.0, 1.33, 2.33]]
+
+Dividing matrix by a float:
+>>> print(matrix_divided(matrix, 3.2))
+[[0.31, 0.94, 1.88], [2.81, 1.25, 2.19]]
+
+dividing matrix by a string:
+>>> print(matrix_divided(matrix, '2'))
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+Passing only one argument to the function:
+>>> matrix_divided(matrix)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+passing no argument to the  function:
+>>> matrix_divided()
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+passing an irregular matrix, the row don't match:
+>>> matrix = [
+...     [998, 46, 787, 23],
+...     [87, 98],
+...     [76, 98, 56]]
+>>> matrix_divided(matrix, 8)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+matrix not a list:
+>>> matrix = [1, 9, 4, 7]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+dividing by zero:
+>>> matrix = [[2, 4], [8, 7]]
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+
+division by float('inf'):
+>>> matrix_divided(matrix, float('inf'))
+[[0.0, 0.0], [0.0, 0.0]]
