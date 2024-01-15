@@ -50,6 +50,8 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
 
     # divide and round off into a new matrix
-    new_mtrix = [[round(element / div, 2) for element in row] for row in matrix]
+    new_mtrix = [
+            [round(element / div, 2) for element in row] for row in matrix
+            ]
 
     return (new_mtrix)
