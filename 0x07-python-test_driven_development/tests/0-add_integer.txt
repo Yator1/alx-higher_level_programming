@@ -1,0 +1,64 @@
+Test 1: 0-add_integer
+Importing the function from the module:
+>>> add_integer = __import__('0-add_integer').add_integer
+>>>
+
+adding two positive integers: 
+>>> add_integer(9, 17)
+26
+
+adding two negative integers:
+>>> add_integer(-12, -9)
+-21
+
+adding one positive and one negative integer
+>>> add_integer(5, -9)
+-4
+
+adding two floats
+>>> add_integer(12.8, 98.9677)
+110
+
+adding two negative floats
+>>> add_integer(-78.9, -12.2)
+-90
+
+adding one positive integer
+>>> add_integer(12)
+110
+
+adding two characters
+>>> add_integer('a', 'c')
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+adding one integer and a character
+>>> add_integer(12, 'c')
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+adding more than two integers
+>>> add_integer(7, 9, 8)
+Traceback (most recent call last):
+    ...
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+passing no argumet to the funtion
+>>> add_integer()
+Traceback (most recent call last):
+    ...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+checking for float overflow:
+>>> add_integer(float('NaN'), 12)
+Traceback (most recent call last):
+    ...
+ValueError: cannot convert float NaN to integer
+
+checking for convert float NaN to integer:
+>>> add_integer(float('inf'), 12)
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
