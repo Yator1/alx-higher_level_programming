@@ -23,7 +23,8 @@ if __name__ == '__main__':
     cur = my_db.cursor()
 
     #executing MySQL queries
-    cur.execute("SELECT * FROM states")
+    my_query = "SELECT * FROM states;"
+    cur.execute(my_query)
 
     #obtaining query results
     states_starting_with_N = cur.fetchall()
@@ -32,3 +33,4 @@ if __name__ == '__main__':
             print(state)
 
     cur.close()
+    my_db.close()
