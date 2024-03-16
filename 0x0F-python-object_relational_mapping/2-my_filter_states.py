@@ -23,7 +23,7 @@ if __name__ == '__main__':
     cur = my_db.cursor()
 
     #executing MySQL queries
-    cur.execute("SELECT * FROM states WHERE name LIKE BINARY \
+    cur.execute("SELECT * FROM states WHERE name = \
             '{}' ORDER BY id ASC".format(sys.argv[4]))
 
     #obtaining query results
