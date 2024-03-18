@@ -24,7 +24,6 @@ def update_state():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Updating a table
     session.query(State).filter(
         State.id == 2).update({'name': 'New Mexico'})
     session.commit()
