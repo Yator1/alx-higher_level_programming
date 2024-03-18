@@ -25,7 +25,9 @@ def states_sql():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for state in session.query(State).order_by(State.id):
+    States = session.query(State).order_by(State.id)
+
+    for state in States:
         print("{}: {}".format(state.id, state.name))
     session.close()
 
