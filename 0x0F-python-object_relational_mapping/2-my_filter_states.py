@@ -19,14 +19,14 @@ if __name__ == '__main__':
         db=sys.argv[3]
         )
 
-    #creating a cursor
+    # Creating a cursor
     cur = my_db.cursor()
 
-    #executing MySQL queries
+    # Executing MySQL queries
     cur.execute("SELECT * FROM states WHERE name LIKE BINARY \
             '{}' ORDER BY id ASC".format(sys.argv[4]))
 
-    #obtaining query results
+    # Obtaining query results
     states = cur.fetchall()
     for state in states:
         print(state)
