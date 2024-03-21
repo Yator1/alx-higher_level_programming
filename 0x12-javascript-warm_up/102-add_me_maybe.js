@@ -3,6 +3,7 @@
 // A function that increments and calls a function
 
 function addMeMaybe (number, theFunction) {
+	
 	// Increment the number
 	number++;
 
