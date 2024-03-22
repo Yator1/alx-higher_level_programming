@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
+
 """
-a script that lists all State objects, and corresponding
-City objects, contained in the database hbtn_0e_101_usa
+a script that lists all City objects from the database hbtn_0e_101_usa
 """
 
 import sys
@@ -12,7 +12,7 @@ from model_state import Base, State
 from model_city import City, Base
 
 
-def list_state_cities():
+def list_cities():
     if len(sys.argv) != 4:
         return
 
@@ -22,13 +22,11 @@ def list_state_cities():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for state in session.query(State).order_by(State.id):
-        print("{}: {}".format(state.id, state.name))
-        for city in state.cities:
-            print("\t{}: {}".format(city.id, city.name))
+    for state in session.query(City).order_by(City.id):
+        print("{}: {} -> {}".format(state.id, state.name, state.state.name))
 
     session.close()
 
 
 if __name__ == "__main__":
-    list_state_cities()
+    list_cities()
