@@ -12,8 +12,8 @@ from sqlalchemy.orm import sessionmaker
 
 def delete_states():
     """
-    -use the module SQLAlchemy
-    -using 3 arguments:
+    use the module SQLAlchemy
+    using 3 arguments:
     mysql username, mysql password and database name
     """
 
