@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-/* 
+/*
  * Class Rectangle that defines a rectangle:
  * An instance method prints the rectangle using the character X
  */
@@ -15,7 +15,7 @@ class Rectangle {
     return constructor.name + {};
   }
 
-  print() {
+  print () {
     for (let i = 0; i < this.height; i++) {
       console.log('X'.repeat(this.width));
     }
