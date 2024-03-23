@@ -22,7 +22,7 @@ class Rectangle {
       console.log('X'.repeat(this.width));
     }
   }
-  
+
   rotate () {
     // exchanges the width and the height of the rectangle
     [this.width, this.height] = [this.height, this.width];
