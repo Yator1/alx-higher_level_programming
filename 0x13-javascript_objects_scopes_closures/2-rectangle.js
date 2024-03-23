@@ -4,9 +4,9 @@
 
 class Rectangle {
   constructor (w, h) {
-    if ( w <= 0 || h <= 0) {
-      const new_obj = {};
-      return new_obj;
+    if (w <= 0 || h <= 0) {
+      const newObj = {};
+      return newObj;
     }
 
     this.width = w;
