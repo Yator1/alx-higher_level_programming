@@ -7,10 +7,6 @@
 const Psquare = require('./5-square');
 
 class Square extends Psquare {
-  constructor (size) {
-    super(size);
-  }
-
   charPrint (c) {
     if (c === undefined) {
       c = 'X';
