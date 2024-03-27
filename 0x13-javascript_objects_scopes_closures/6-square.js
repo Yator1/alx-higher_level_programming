@@ -4,12 +4,13 @@
  * A class square that defines a square and inherits
  * square from 5-square.js
  */
-const P_square = require('./5-square');
+const Psquare = require('./5-square');
 
-class Square extends P_square {
+class Square extends Psquare {
   constructor (size) {
     super(size);
   }
+
   charPrint (c) {
     if (c === undefined) {
       c = 'X';
