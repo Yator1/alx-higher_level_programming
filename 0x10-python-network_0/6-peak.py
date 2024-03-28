@@ -5,6 +5,7 @@ This module contain one function
 find_peak function
 """
 
+
 def find_peak(list_of_integers):
     """
     a function that finds a peak in a list of unsorted integers.
@@ -21,6 +22,4 @@ def find_peak(list_of_integers):
             left = mid + 1
         else:
             right = mid
-
-
     return list_of_integers[left] if list_of_integers else None
